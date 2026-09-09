@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Story | Café Bloom</title>
+<meta name="description" content="Learn how Café Bloom began, our philosophy, and the values that guide everything we serve.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header" id="siteHeader">
+  <div class="nav-wrap">
+    <a href="index.html" class="nav-logo">
+      <i class="fa-solid fa-leaf" aria-hidden="true"></i>
+      <span>Café Bloom</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html" class="active">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="reservation.html">Reservation</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="searchToggle" aria-label="Search the menu" aria-expanded="false">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+      </button>
+      <button class="icon-btn" id="favToggle" aria-label="View favorites">
+        <i class="fa-regular fa-heart" aria-hidden="true"></i>
+        <span class="badge" id="favCount">0</span>
+      </button>
+      <button class="icon-btn" id="cartToggle" aria-label="Open cart" aria-haspopup="dialog">
+        <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+        <span class="badge" id="cartCount">0</span>
+      </button>
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode">
+        <i class="fa-solid fa-moon" aria-hidden="true"></i>
+      </button>
+      <a href="reservation.html" class="btn btn-primary btn-sm nav-reserve">Reserve</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileDrawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="nav-search" id="navSearch" hidden>
+    <div class="nav-wrap">
+      <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+      <input type="search" id="quickSearch" placeholder="Search our menu…" aria-label="Search our menu">
+      <button class="icon-btn" id="searchClose" aria-label="Close search"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+  <nav aria-label="Mobile">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="about.html" class="active">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="reservation.html">Reservation</a>
+    <a href="reservation.html" class="btn btn-primary">Reserve a Table</a>
+  </nav>
+</div>
+<div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+<main id="main">
+
+  <section class="page-hero about-hero">
+    <div class="container">
+      <p class="eyebrow">About Café Bloom</p>
+      <h1>Our story</h1>
+    </div>
+  </section>
+
+  <section class="section-block story-section">
+    <div class="container story-grid">
+      <div class="story-media reveal">
+        <img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?q=80&w=1200&auto=format&fit=crop" alt="Two hands working together to prepare coffee at a rustic counter">
+      </div>
+      <div class="story-copy reveal">
+        <p class="eyebrow">How it began</p>
+        <h2>How Café Bloom began</h2>
+        <p>Café Bloom started in 2016 with two friends, Amina and Rafiq, who shared a single idea: that coffee tastes better when it's made for someone you know. They opened a four-table shopfront on a quiet Dhaka side street, roasting small batches of beans on weekends and baking bread before sunrise.</p>
+        <p>What began as a hobby between two coffee lovers slowly became a neighbourhood habit. Regulars started arriving before the sign was even lit, and by the second year, the four tables had turned into fourteen. The recipe never changed — good ingredients, unhurried mornings, and a seat for anyone who needed one.</p>
+        <p>Today, Café Bloom is still run with that same spirit: a space built one relationship at a time, cup by cup.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block philosophy-section alt-bg">
+    <div class="container">
+      <div class="section-head center">
+        <p class="eyebrow">Our Philosophy</p>
+        <h2>Four ideas guide everything we do</h2>
+      </div>
+      <div class="philosophy-grid">
+        <div class="philosophy-item reveal">
+          <h3>Quality</h3>
+          <p>We source beans and ingredients we'd be proud to serve to our own families.</p>
+        </div>
+        <div class="philosophy-item reveal">
+          <h3>Community</h3>
+          <p>Every table is an invitation — to linger, to talk, to belong somewhere for a while.</p>
+        </div>
+        <div class="philosophy-item reveal">
+          <h3>Creativity</h3>
+          <p>Our menu evolves with the seasons, guided by curiosity rather than trends.</p>
+        </div>
+        <div class="philosophy-item reveal">
+          <h3>Hospitality</h3>
+          <p>We greet every guest the way we'd want to be greeted: warmly, and without hurry.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block values-section">
+    <div class="container">
+      <div class="section-head center">
+        <p class="eyebrow">What We Stand For</p>
+        <h2>Our values</h2>
+      </div>
+      <div class="values-grid">
+        <article class="value-card reveal">
+          <i class="fa-solid fa-award"></i>
+          <h3>Quality First</h3>
+          <p>Every cup and plate is held to the same high standard, every single day.</p>
+        </article>
+        <article class="value-card reveal">
+          <i class="fa-solid fa-carrot"></i>
+          <h3>Fresh Ingredients</h3>
+          <p>We buy from local suppliers and prep in-house each morning.</p>
+        </article>
+        <article class="value-card reveal">
+          <i class="fa-solid fa-hands-holding-circle"></i>
+          <h3>Warm Hospitality</h3>
+          <p>Guests leave feeling looked after, not just served.</p>
+        </article>
+        <article class="value-card reveal">
+          <i class="fa-solid fa-leaf"></i>
+          <h3>Sustainable Choices</h3>
+          <p>Compostable packaging, reusable cups, and mindful sourcing throughout.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats-section">
+    <div class="container stats-grid" id="statsSection">
+      <div class="stat-block reveal">
+        <span class="counter" data-target="10">0</span><span class="counter-suffix">+</span>
+        <p>Years</p>
+      </div>
+      <div class="stat-block reveal">
+        <span class="counter" data-target="25">0</span><span class="counter-suffix">+</span>
+        <p>Signature Items</p>
+      </div>
+      <div class="stat-block reveal">
+        <span class="counter" data-target="50">0</span><span class="counter-suffix">K+</span>
+        <p>Guests</p>
+      </div>
+      <div class="stat-block reveal">
+        <span class="counter" data-target="20">0</span><span class="counter-suffix">+</span>
+        <p>Team Members</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-col footer-about">
+      <a href="index.html" class="nav-logo">
+        <i class="fa-solid fa-leaf" aria-hidden="true"></i>
+        <span>Café Bloom</span>
+      </a>
+      <p>A warm, premium café serving handcrafted coffee and food, made with care since day one.</p>
+      <div class="social-icons">
+        <a href="#" aria-label="Café Bloom on Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Café Bloom on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="Café Bloom on X"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="reservation.html">Reservation</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Opening Hours</h4>
+      <p>Monday – Friday<br>8:00 AM – 10:00 PM</p>
+      <p>Saturday – Sunday<br>9:00 AM – 11:00 PM</p>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p><i class="fa-solid fa-location-dot"></i> Dhaka, Bangladesh</p>
+      <p><i class="fa-solid fa-phone"></i> +880 1XXX-XXXXXX</p>
+      <p><i class="fa-solid fa-envelope"></i> hello@cafebloom.com</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Café Bloom. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<div class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-label="Shopping cart" aria-hidden="true">
+  <div class="cart-header">
+    <h3>Your Cart</h3>
+    <button class="icon-btn" id="cartClose" aria-label="Close cart"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <p class="cart-empty">Your cart is empty.</p>
+  </div>
+  <div class="cart-footer">
+    <div class="cart-row"><span>Subtotal</span><strong id="cartSubtotal">৳0</strong></div>
+    <button class="btn btn-primary btn-block" id="checkoutBtn">Checkout</button>
+  </div>
+</div>
+<div class="drawer-backdrop" id="cartBackdrop"></div>
+
+<div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

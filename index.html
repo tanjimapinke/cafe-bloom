@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Café Bloom | Where Every Cup Tells a Story</title>
+<meta name="description" content="Café Bloom is a premium café serving freshly roasted coffee, handcrafted dishes and a warm space to linger in.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============ HEADER / NAVIGATION ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="nav-wrap">
+    <a href="index.html" class="nav-logo">
+      <i class="fa-solid fa-leaf" aria-hidden="true"></i>
+      <span>Café Bloom</span>
+    </a>
+
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html" class="active">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="reservation.html">Reservation</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="icon-btn" id="searchToggle" aria-label="Search the menu" aria-expanded="false">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+      </button>
+      <button class="icon-btn" id="favToggle" aria-label="View favorites">
+        <i class="fa-regular fa-heart" aria-hidden="true"></i>
+        <span class="badge" id="favCount">0</span>
+      </button>
+      <button class="icon-btn" id="cartToggle" aria-label="Open cart" aria-haspopup="dialog">
+        <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+        <span class="badge" id="cartCount">0</span>
+      </button>
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode">
+        <i class="fa-solid fa-moon" aria-hidden="true"></i>
+      </button>
+      <a href="reservation.html" class="btn btn-primary btn-sm nav-reserve">Reserve</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileDrawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="nav-search" id="navSearch" hidden>
+    <div class="nav-wrap">
+      <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+      <input type="search" id="quickSearch" placeholder="Search our menu…" aria-label="Search our menu">
+      <button class="icon-btn" id="searchClose" aria-label="Close search"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile drawer -->
+<div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+  <nav aria-label="Mobile">
+    <a href="index.html" class="active">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="about.html">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="reservation.html">Reservation</a>
+    <a href="reservation.html" class="btn btn-primary">Reserve a Table</a>
+  </nav>
+</div>
+<div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-media">
+      <img src="images/hero.jpg"
+     alt="Warm, sunlit interior of Café Bloom with wooden tables and hanging plants"
+     loading="eager">
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Welcome to Café Bloom</p>
+      <h1 class="hero-title">Where every cup<br>tells a story.</h1>
+      <p class="hero-desc">Freshly brewed coffee, handcrafted dishes, and warm moments in a space designed to make you stay a little longer.</p>
+      <div class="hero-actions">
+        <a href="menu.html" class="btn btn-primary">Explore Menu</a>
+        <a href="reservation.html" class="btn btn-outline-light">Reserve a Table</a>
+      </div>
+    </div>
+    <a href="#features" class="scroll-indicator" aria-label="Scroll to content">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ============ FEATURE HIGHLIGHTS ============ -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="feature-grid">
+        <article class="feature-card reveal">
+          <i class="fa-solid fa-mug-hot" aria-hidden="true"></i>
+          <h3>Freshly Roasted</h3>
+          <p>Premium coffee beans roasted in small batches for a rich, layered flavor.</p>
+        </article>
+        <article class="feature-card reveal">
+          <i class="fa-solid fa-hand-sparkles" aria-hidden="true"></i>
+          <h3>Handcrafted</h3>
+          <p>Every drink and dish is carefully prepared to order, never rushed.</p>
+        </article>
+        <article class="feature-card reveal">
+          <i class="fa-solid fa-couch" aria-hidden="true"></i>
+          <h3>Cozy Atmosphere</h3>
+          <p>A warm space for quiet mornings, long conversations, and slow afternoons.</p>
+        </article>
+        <article class="feature-card reveal">
+          <i class="fa-solid fa-seedling" aria-hidden="true"></i>
+          <h3>Made With Love</h3>
+          <p>Quality ingredients, thoughtful preparation, and a genuine care for the craft.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURED MENU ============ -->
+  <section class="section-block" id="favorites-section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Our Favorites</p>
+        <h2>Some of the flavors our guests love most</h2>
+      </div>
+      <div class="menu-grid" id="featuredMenuGrid"></div>
+      <div class="section-cta">
+        <a href="menu.html" class="btn btn-outline">View Full Menu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT PREVIEW ============ -->
+  <section class="about-preview">
+    <div class="container about-preview-grid">
+      <div class="about-preview-media reveal">
+        <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?q=80&w=1400&auto=format&fit=crop" alt="Café Bloom's interior seating area with warm lighting and greenery" loading="lazy">
+      </div>
+      <div class="about-preview-copy reveal">
+        <p class="eyebrow">Our Story</p>
+        <h2>More than just coffee</h2>
+        <p>Café Bloom began as a small corner counter with two chairs and a single espresso machine. Over the years it grew into a gathering place — where regulars know each other's names and every visit feels a little like coming home.</p>
+        <p>Today we still roast in small batches, cook from scratch each morning, and treat every guest like they've just walked into a friend's kitchen.</p>
+        <div class="stat-grid">
+          <div class="stat"><strong>10+</strong><span>Years of Craft</span></div>
+          <div class="stat"><strong>25+</strong><span>Signature Dishes</span></div>
+          <div class="stat"><strong>50K+</strong><span>Happy Guests</span></div>
+        </div>
+        <a href="about.html" class="btn btn-outline">Discover Our Story</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SPECIAL OFFER ============ -->
+  <section class="special-offer">
+    <div class="special-offer-media">
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1600&auto=format&fit=crop" alt="A slice of cheesecake served beside a latte on a wooden table" loading="lazy">
+    </div>
+    <div class="special-offer-content reveal">
+      <p class="eyebrow">Limited Time</p>
+      <h2>Bloom's Afternoon Treat</h2>
+      <p>Enjoy a handcrafted coffee with your favorite dessert, every day between 3 and 6 pm.</p>
+      <a href="menu.html" class="btn btn-primary">Explore Today's Special</a>
+    </div>
+  </section>
+
+  <!-- ============ CUSTOMER REVIEWS ============ -->
+  <section class="section-block reviews-section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Testimonials</p>
+        <h2>What our guests say</h2>
+      </div>
+
+      <div class="review-slider" id="reviewSlider">
+        <div class="review-track" id="reviewTrack">
+
+          <article class="review-card">
+            <div class="review-top">
+              <img src="https://i.pravatar.cc/80?img=32" alt="" class="review-avatar">
+              <div>
+                <h4>Sinha</h4>
+                <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+              </div>
+            </div>
+            <p>"The cappuccino here is the best in the city, and the staff always remembers my order. It feels like a second living room."</p>
+            <time>March 2026</time>
+          </article>
+
+          <article class="review-card">
+            <div class="review-top">
+              <img src="https://i.pravatar.cc/80?img=12" alt="" class="review-avatar">
+              <div>
+                <h4>Tanvir Ahmed</h4>
+                <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+              </div>
+            </div>
+            <p>"Café Bloom is my Sunday ritual. The avocado toast and the quiet corner table are exactly what I need to reset."</p>
+            <time>February 2026</time>
+          </article>
+
+          <article class="review-card">
+            <div class="review-top">
+              <img src="https://i.pravatar.cc/80?img=47" alt="" class="review-avatar">
+              <div>
+                <h4>Farzana Rahman</h4>
+                <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+              </div>
+            </div>
+            <p>"Booked a table for my birthday and the whole evening felt effortless. Warm service, beautiful space, wonderful food."</p>
+            <time>January 2026</time>
+          </article>
+
+        </div>
+
+        <div class="slider-controls">
+          <button class="slider-btn" id="reviewPrev" aria-label="Previous review"><i class="fa-solid fa-arrow-left"></i></button>
+          <div class="slider-dots" id="reviewDots"></div>
+          <button class="slider-btn" id="reviewNext" aria-label="Next review"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALLERY PREVIEW ============ -->
+  <section class="section-block gallery-preview">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Around the Café</p>
+        <h2>A taste of Café Bloom</h2>
+      </div>
+      <div class="gallery-grid" id="galleryPreviewGrid"></div>
+      <div class="section-cta">
+        <a href="gallery.html" class="btn btn-outline">View Gallery</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NEWSLETTER ============ -->
+  <section class="newsletter">
+    <div class="container newsletter-inner reveal">
+      <div>
+        <h2>Stay in the Bloom</h2>
+        <p>Get café updates, seasonal specials and little moments of inspiration.</p>
+      </div>
+      <form id="newsletterForm" class="newsletter-form" novalidate>
+        <label for="newsletterEmail" class="visually-hidden">Email address</label>
+        <input type="email" id="newsletterEmail" name="email" placeholder="Email address" required>
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-col footer-about">
+      <a href="index.html" class="nav-logo">
+        <i class="fa-solid fa-leaf" aria-hidden="true"></i>
+        <span>Café Bloom</span>
+      </a>
+      <p>A warm, premium café serving handcrafted coffee and food, made with care since day one.</p>
+      <div class="social-icons">
+        <a href="#" aria-label="Café Bloom on Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Café Bloom on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="Café Bloom on X"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="reservation.html">Reservation</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Opening Hours</h4>
+      <p>Monday – Friday<br>8:00 AM – 10:00 PM</p>
+      <p>Saturday – Sunday<br>9:00 AM – 11:00 PM</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p><i class="fa-solid fa-location-dot"></i> Dhaka, Bangladesh</p>
+      <p><i class="fa-solid fa-phone"></i> +880 1XXX-XXXXXX</p>
+      <p><i class="fa-solid fa-envelope"></i> hello@cafebloom.com</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Café Bloom. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- ============ CART DRAWER ============ -->
+<div class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-label="Shopping cart" aria-hidden="true">
+  <div class="cart-header">
+    <h3>Your Cart</h3>
+    <button class="icon-btn" id="cartClose" aria-label="Close cart"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <p class="cart-empty">Your cart is empty.</p>
+  </div>
+  <div class="cart-footer">
+    <div class="cart-row"><span>Subtotal</span><strong id="cartSubtotal">৳0</strong></div>
+    <button class="btn btn-primary btn-block" id="checkoutBtn">Checkout</button>
+  </div>
+</div>
+<div class="drawer-backdrop" id="cartBackdrop"></div>
+
+<!-- ============ TOASTS ============ -->
+<div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close image viewer"><i class="fa-solid fa-xmark"></i></button>
+  <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous image"><i class="fa-solid fa-chevron-left"></i></button>
+  <img id="lightboxImg" src="" alt="">
+  <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image"><i class="fa-solid fa-chevron-right"></i></button>
+  <div class="lightbox-count" id="lightboxCount"></div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

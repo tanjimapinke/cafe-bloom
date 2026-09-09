@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reservation — Café Bloom</title>
+<meta name="description" content="Reserve your table at Café Bloom for a warm, memorable visit.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/reservation.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header" id="siteHeader">
+  <div class="nav-wrap">
+    <a href="index.html" class="nav-logo">
+      <i class="fa-solid fa-leaf" aria-hidden="true"></i>
+      <span>Café Bloom</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="reservation.html" class="active">Reservation</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="searchToggle" aria-label="Search the menu" aria-expanded="false">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+      </button>
+      <button class="icon-btn" id="favToggle" aria-label="View favorites">
+        <i class="fa-regular fa-heart" aria-hidden="true"></i>
+        <span class="badge" id="favCount">0</span>
+      </button>
+      <button class="icon-btn" id="cartToggle" aria-label="Open cart" aria-haspopup="dialog">
+        <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+        <span class="badge" id="cartCount">0</span>
+      </button>
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode">
+        <i class="fa-solid fa-moon" aria-hidden="true"></i>
+      </button>
+      <a href="reservation.html" class="btn btn-primary btn-sm nav-reserve">Reserve</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileDrawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="nav-search" id="navSearch" hidden>
+    <div class="nav-wrap">
+      <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+      <input type="search" id="quickSearch" placeholder="Search our menu…" aria-label="Search our menu">
+      <button class="icon-btn" id="searchClose" aria-label="Close search"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+  <nav aria-label="Mobile">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="about.html">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="reservation.html" class="active">Reservation</a>
+    <a href="reservation.html" class="btn btn-primary">Reserve a Table</a>
+  </nav>
+</div>
+<div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+<main id="main">
+
+  <section class="page-hero reservation-hero">
+    <div class="container">
+      <p class="eyebrow">Reservation</p>
+      <h1>Reserve your table</h1>
+      <p class="subtitle">Make your next moment special at Café Bloom.</p>
+    </div>
+  </section>
+
+  <section class="section-block reservation-section">
+    <div class="container reservation-grid">
+
+      <form class="reservation-form" id="reservationForm" novalidate>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" required autocomplete="name">
+            <span class="field-error" id="err-fullName"></span>
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+            <span class="field-error" id="err-email"></span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="01XXXXXXXXX">
+            <span class="field-error" id="err-phone"></span>
+          </div>
+          <div class="form-field">
+            <label for="guests">Number of Guests</label>
+            <input type="number" id="guests" name="guests" min="1" max="20" value="2" required>
+            <span class="field-error" id="err-guests"></span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" required>
+            <span class="field-error" id="err-date"></span>
+          </div>
+          <div class="form-field">
+            <label for="time">Time</label>
+            <input type="time" id="time" name="time" required>
+            <span class="field-error" id="err-time"></span>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="seating">Seating Preference</label>
+          <select id="seating" name="seating">
+            <option value="Indoor">Indoor</option>
+            <option value="Outdoor">Outdoor</option>
+            <option value="Window Seat">Window Seat</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="request">Special Request</label>
+          <textarea id="request" name="request" rows="4" placeholder="Anniversary, dietary needs, seating notes…"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Reserve Now</button>
+        <p class="form-note">This is a frontend demo only — no emails are sent and no data leaves your browser.</p>
+      </form>
+
+      <aside class="reservation-info">
+        <div class="info-card reveal">
+          <h3><i class="fa-solid fa-clock"></i> Opening Hours</h3>
+          <p>Monday – Friday<br>8:00 AM – 10:00 PM</p>
+          <p>Saturday – Sunday<br>9:00 AM – 11:00 PM</p>
+        </div>
+        <div class="info-card reveal">
+          <h3><i class="fa-solid fa-location-dot"></i> Contact</h3>
+          <p>Dhaka, Bangladesh</p>
+          <p>+880 1XXX-XXXXXX</p>
+          <p>hello@cafebloom.com</p>
+        </div>
+        <div class="map-card reveal">
+          <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=900&auto=format&fit=crop" alt="Illustrative map view of the neighborhood around Café Bloom">
+          <div class="map-pin"><i class="fa-solid fa-location-dot"></i></div>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-col footer-about">
+      <a href="index.html" class="nav-logo">
+        <i class="fa-solid fa-leaf" aria-hidden="true"></i>
+        <span>Café Bloom</span>
+      </a>
+      <p>A warm, premium café serving handcrafted coffee and food, made with care since day one.</p>
+      <div class="social-icons">
+        <a href="#" aria-label="Café Bloom on Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Café Bloom on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="Café Bloom on X"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="reservation.html">Reservation</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Opening Hours</h4>
+      <p>Monday – Friday<br>8:00 AM – 10:00 PM</p>
+      <p>Saturday – Sunday<br>9:00 AM – 11:00 PM</p>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p><i class="fa-solid fa-location-dot"></i> Dhaka, Bangladesh</p>
+      <p><i class="fa-solid fa-phone"></i> +880 1XXX-XXXXXX</p>
+      <p><i class="fa-solid fa-envelope"></i> hello@cafebloom.com</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Café Bloom. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<div class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-label="Shopping cart" aria-hidden="true">
+  <div class="cart-header">
+    <h3>Your Cart</h3>
+    <button class="icon-btn" id="cartClose" aria-label="Close cart"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <p class="cart-empty">Your cart is empty.</p>
+  </div>
+  <div class="cart-footer">
+    <div class="cart-row"><span>Subtotal</span><strong id="cartSubtotal">৳0</strong></div>
+    <button class="btn btn-primary btn-block" id="checkoutBtn">Checkout</button>
+  </div>
+</div>
+<div class="drawer-backdrop" id="cartBackdrop"></div>
+
+<div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+<!-- Confirmation Modal -->
+<div class="modal-backdrop" id="confirmModalBackdrop" hidden>
+  <div class="confirm-modal" role="dialog" aria-modal="true" aria-labelledby="confirmTitle">
+    <div class="confirm-icon"><i class="fa-solid fa-check"></i></div>
+    <h2 id="confirmTitle">Reservation Confirmed!</h2>
+    <p>Thank you for choosing Café Bloom. We look forward to welcoming you.</p>
+    <div class="confirm-details" id="confirmDetails"></div>
+    <button class="btn btn-primary" id="confirmClose">Done</button>
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+<script src="js/reservation.js"></script>
+</body>
+</html>

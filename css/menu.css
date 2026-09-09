@@ -1,0 +1,41 @@
+/* =============================================================
+   CAFÉ BLOOM — menu.css
+   Page-specific styles for menu.html (shares .menu-grid / .menu-card
+   with style.css). Covers hero, toolbar, filters and search field.
+   ============================================================= */
+
+.page-hero {
+  padding: 8.5rem 0 4rem;
+  background: linear-gradient(180deg, var(--bg-alt) 0%, var(--bg) 100%);
+  text-align: center;
+}
+.page-hero .eyebrow { display: block; margin-bottom: .8rem; }
+.page-hero h1 { font-size: clamp(2rem, 4vw, 2.9rem); max-width: 720px; margin: 0 auto; }
+.page-hero p.subtitle { margin: 1rem auto 0; }
+
+.menu-page { padding-top: 3.5rem; }
+
+.menu-toolbar {
+  display: flex; flex-direction: column; gap: 1.6rem; margin-bottom: 2.8rem;
+}
+.menu-search-field {
+  display: flex; align-items: center; gap: .8rem; background: var(--surface);
+  border: 1px solid var(--border); border-radius: 999px; padding: .8rem 1.4rem; max-width: 420px;
+}
+.menu-search-field i { color: var(--text-muted); }
+.menu-search-field input { flex: 1; border: none; background: none; outline: none; color: var(--text); }
+
+.menu-empty { text-align: center; padding: 3rem 0; color: var(--text-muted); }
+
+.menu-grid { grid-template-columns: repeat(3, 1fr); }
+
+.menu-card.hidden-item { display: none; }
+
+@media (max-width: 1024px) {
+  .menu-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .menu-grid { grid-template-columns: 1fr; }
+  .category-filters { gap: .5rem; }
+  .filter-btn { padding: .5rem 1rem; font-size: .82rem; }
+}
