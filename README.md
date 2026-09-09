@@ -2,6 +2,12 @@
 
 A complete, premium café brand website — *"Where every cup tells a story."* Built as a fully static, frontend-only site with HTML5, CSS3 and vanilla JavaScript. No frameworks, no backend, no build step: open `index.html` and it works.
 
+## 🌐 Live Website
+
+**[Visit Café Bloom](https://tanjimapinke.github.io/cafe-bloom/)**
+
+> Explore the live Café Bloom website hosted with GitHub Pages.
+
 ## Features
 
 - Five fully designed pages: Home, Menu, About, Gallery, Reservation
